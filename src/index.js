@@ -1,16 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-// import App from './App';
-import Hello from './Hello'; // same as saying Hello.js, if not specified the format
+import Card from './Card';
 import reportWebVitals from './reportWebVitals';
+import 'tachyons';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    {/* <App /> */}
-    <Hello />
-    {/* <h1>Hello World</h1> */}
+    <Card />
   </React.StrictMode>
 );
 
