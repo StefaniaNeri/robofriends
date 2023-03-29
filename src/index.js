@@ -1,15 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import CardList from './CardList';
+
+import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'tachyons';
-import { robots } from './robots'; // need to destructure it because it isn't default, it isn't only just one (well in this case is one, but it's not set to default so we need to tell it by destructuring)
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <CardList robots={robots} />
+    <App />
   </React.StrictMode>
 );
 
