@@ -3,6 +3,7 @@ import CardList from '../components/CardList';
 import SearchBox from '../components/SearchBox';
 //import { robots } from './robots'; // need to destructure it because it isn't default, it isn't only just one (well in this case is one, but it's not set to default so we need to tell it by destructuring)
 import Scroll from '../components/Scroll';
+import ErrorBoundry from '../components/ErrorBoundry';
 import './App.css';
 
 class App extends Component {
@@ -38,7 +39,11 @@ class App extends Component {
         {/* passing this function as a prop */}
         {/* 'this' is the App, which is an object */}
         <Scroll>
-          <CardList robots={filteredRobots} />
+          <ErrorBoundry>
+            {' '}
+            {/*if anything in the CardList fails, it's going to catch it and display the error message*/}
+            <CardList robots={filteredRobots} />
+          </ErrorBoundry>
         </Scroll>
       </div>
     );
