@@ -11,7 +11,7 @@ const Scroll = props => {
     >
       {props.children}
     </div>
-  ); // even without passing any props, automatically every component has the 'children' property, which has in this case the type CardList. Double {}, the first to say that is a jsx syntax, and the internal one to say we pass an object
+  );
 };
 
 export default Scroll;
