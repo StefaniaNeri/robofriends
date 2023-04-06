@@ -9,7 +9,6 @@ class ErrorBoundry extends Component {
   }
 
   componentDidCatch() {
-    // if this gets triggered, similar to the try catch in js
     this.setState({ hasError: true });
   }
 
